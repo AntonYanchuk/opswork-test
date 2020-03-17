@@ -1,0 +1,1 @@
+default['customes_variables'] = 'stack_1'
