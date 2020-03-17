@@ -1,1 +1,1 @@
-default['customes_variables'] = 'stack_1'
+default['custom_variables'] = 'stack_1'
