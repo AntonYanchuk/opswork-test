@@ -10,8 +10,8 @@ password = ""
 #    'horizon-lab3b' => 'new-password'
 #    }
 default['stack_list'] = { 
-    "stack1": 'password',
-    'horizon-lab3b': 'new-password'
+    "stack1" => 'password',
+    'horizon-lab3b' => 'new-password'
 }
 #
 
