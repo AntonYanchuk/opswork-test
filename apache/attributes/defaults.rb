@@ -32,3 +32,4 @@ puts "result: #{password}"
 
 default['custom_variables'] = file.read
 default['stack_variable'] = stack_name
+default['password'] = password
