@@ -1,15 +1,18 @@
 file = File.open("/etc/motd.opsworks-static")
 
+stack_name = ""
 
-if File.readlines("/etc/motd.opsworks-static").grep(/stack1/).size > 0
-    stack_name = 'stack1'
-    puts stack_name
-elsif File.readlines("/etc/motd.opsworks-static").grep(/horizon-lab3b/).size > 0
-    stack_name = 'horizon-lab3b'
-    puts stack_name
+stack_list = ['stack1', 'horizon-lab3b']
+stack_list.each do |stack| 
+    puts "Current stack: #{stack}" 
+    if File.readlines("/etc/motd.opsworks-static").grep(/#{stack}/).size > 0
+        stack_name = stack
+#        puts stack_name
+#        puts $(File.read("motd.opsworks-static"))
+#    elsif File.readlines("motd.opsworks-static").grep(/#{stack}/).size > 0
+#        stack_name = stack
+    end
 end
-
-
 
 default['custom_variables'] = file.read
 default['stack_variable'] = stack_name
