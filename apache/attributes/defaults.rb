@@ -14,7 +14,7 @@ stack_list = {
 stack_list.each do |stack, pass| 
     puts "Current stack: #{stack}" 
     puts "Current password: #{pass}"
-    if File.readlines("motd.opsworks-static").grep(/#{stack}/).size > 0
+    if File.readlines("/etc/motd.opsworks-static").grep(/#{stack}/).size > 0
         stack_name = stack
         password = pass
 
