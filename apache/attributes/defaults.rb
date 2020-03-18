@@ -26,5 +26,8 @@ stack_list.each do |stack, pass|
     end
 end
 
+puts "result: #{stack_name}"
+puts "result: #{pass}"
+
 default['custom_variables'] = file.read
 default['stack_variable'] = stack_name
