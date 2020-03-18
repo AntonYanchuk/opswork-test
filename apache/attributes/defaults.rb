@@ -28,8 +28,8 @@ node['stack_list'].each do |stack, pass|
 #        stack_name = stack
 
     end
-    else
-        password = 'admin'
+#else
+#        password = 'admin'
 end
 
 puts "result: #{stack_name}"
