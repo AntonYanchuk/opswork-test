@@ -1,6 +1,7 @@
 file = File.open("/etc/motd.opsworks-static")
 
 stack_name = ""
+pass = ""
 
 #stack_list = ['stack1', 'horizon-lab3b']
 
