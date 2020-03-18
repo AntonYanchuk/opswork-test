@@ -5,14 +5,17 @@ password = ""
 
 #stack_list = ['stack1', 'horizon-lab3b']
 
-stack_list = { 
-    "stack1" => 'password',
-    'horizon-lab3b' => 'new-password'
-    }
-
+#stack_list = { 
+#    "stack1" => 'password',
+#    'horizon-lab3b' => 'new-password'
+#    }
+default['stack_list'] = { 
+    "stack1": 'password',
+    'horizon-lab3b': 'new-password'
+}
 #
 
-stack_list.each do |stack, pass| 
+node['stack_list'].each do |stack, pass| 
     puts "Current stack: #{stack}" 
     puts "Current password: #{pass}"
     if File.readlines("/etc/motd.opsworks-static").grep(/#{stack}/).size > 0
@@ -25,6 +28,8 @@ stack_list.each do |stack, pass|
 #        stack_name = stack
 
     end
+    else
+        password = 'admin'
 end
 
 puts "result: #{stack_name}"
