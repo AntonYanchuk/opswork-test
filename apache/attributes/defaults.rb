@@ -1,7 +1,7 @@
 file = File.open("/etc/motd.opsworks-static")
 
 stack_name = ""
-pass = ""
+password = ""
 
 #stack_list = ['stack1', 'horizon-lab3b']
 
@@ -28,7 +28,7 @@ stack_list.each do |stack, pass|
 end
 
 puts "result: #{stack_name}"
-puts "result: #{pass}"
+puts "result: #{password}"
 
 default['custom_variables'] = file.read
 default['stack_variable'] = stack_name
